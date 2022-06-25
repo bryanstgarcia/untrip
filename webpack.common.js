@@ -27,6 +27,16 @@ module.exports = {
           }]
         }, //css only files
         {
+          test: /\.scss$/,
+            use: [{
+              loader: "style-loader"
+            }, {
+              loader: "css-loader" 
+            }, {
+              loader: "sass-loader"
+            }]
+        },
+        {
           test: /\.(png|svg|jpg|gif|jpeg|webp)$/, use: {
             loader: 'file-loader',
             options: { name: '[name].[ext]' }
