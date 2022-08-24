@@ -8,6 +8,7 @@
 
 // Components
 @import "./components/Navbar";
+@import "./components/home/Landing";
 
 
 
@@ -31,12 +32,51 @@ a {
         color: $cl-dark;
     }
 }
-
 .light {
-    background-color: $cl-lt-primary;
-    color: $cl-dark;
+    &.background {
+        background-color: $cl-lt-primary;
+    }
+    &.background-contrast {
+        background-color: $cl-light;
+    }
+    &.text {
+        color: $cl-dark;
+    }
 }
 .dark {
-    background-color: $cl-dark;
-    color: $cl-light;    
+    &.background {
+        background-color: $cl-dt-primary;
+    }
+    &.background-contrast {
+        background-color: $cl-dark;
+    }
+    &.text {
+        color: $cl-light;    
+    }
+}
+@media (prefers-color-scheme: light) {
+    .light {
+        &.background {
+            background-color: $cl-lt-primary;
+        }
+        &.background-contrast {
+            background-color: $cl-light;
+        }
+        &.text {
+            color: $cl-dark;
+        }
+    }
+}
+@media (preferes-color-scheme: dark) {
+    .dark {
+        &.background {
+            background-color: $cl-dt-secundary;
+        }
+        &.background-contrast {
+            background-color: $cl-dark;
+        }
+        &.text {
+            color: $cl-light;    
+        }
+    }
 }
