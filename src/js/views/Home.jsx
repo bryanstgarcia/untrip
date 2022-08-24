@@ -1,15 +1,13 @@
-import React from "react";
-import { useContext } from "react/cjs/react.development";
+import React, { useContext } from "react";
+import { LandingPage } from "../components/home/LandingPage.jsx";
 import { Context } from "../store/appContext";
-
-import rigoImage from "../../img/rigo-baby.jpg";
 
 export const Home = () => {
 	const { store, actions} = useContext(Context)
 
 	return (
-		<div className={`untrip ${store.theme}`}>
-			Home 
+		<div className={`untrip ${store.theme} background-contrast`}>
+			<LandingPage />
 		</div>
 	);
 }
