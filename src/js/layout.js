@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./component/ScrollToTop.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 import { Home } from "./views/Home.jsx";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/Navbar.jsx";
-import { Footer } from "./component/Footer.jsx";
+import { Navbar } from "./components/Navbar.jsx";
+import { Footer } from "./components/Footer.jsx";
 import { Login } from "./views/Login.jsx";
 import { Signup } from "./views/Signup.jsx";
 import { NotFound } from "./views/NotFound.jsx";
