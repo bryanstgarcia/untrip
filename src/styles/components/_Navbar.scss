@@ -23,35 +23,256 @@
 }
 .nav__list {
     display: none;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
     align-items: center;
     list-style: none;
+    padding: 15% 0;
+    z-index: 98;
+    animation-name: menu-open;
+    animation-duration: 750ms;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
     li {
-        margin-left: 1rem;
-        color: $cl-light;
+        margin: 1rem;
+        color: transparent;
+        background-color: transparent;
+        background-color: transparent;
+        animation-name: list-open;
+        animation-duration: 1050ms;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
         a {
             text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            background-color: transparent;
+            color: transparent;
+            animation-name: list-open;
+            animation-duration: 1050ms;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
         }
     }
 }
+@keyframes menu-open {
+    0% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: $cl-dark;
+    }
+}
+@keyframes list-open {
+    0% {
+        color: transparent;
+
+    }
+    100% {
+        color: $cl-light;
+    }
+}
+.nav__list--theme {
+    width: 3rem;
+    height: 2rem;
+    border: 0;
+    background-color: transparent;
+    img {
+        width: 25px;
+        animation-name: img-open;
+        animation-duration: 1050ms;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes img-open {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes img-close {
+    0% {
+        transform: scale(0);
+
+    }
+    100% {
+        transform: scale(1
+        );
+    }
+}
 .hamburger {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    position: relative;
     width: 30px;
-    height: 25px;
+    height: 20px;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 99;
 }
 .nav__hamburger {
     width: 100%;
     height: 3px;
     border-radius: 5rem;
     border: 0;
-    background-color: $cl-dt-secundary;
+    background-color: $cl-dark;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.hamburger__one {
+    position: relative;
+    bottom: 6px;
+    left: 0;
+}
+.hamburger__three {
+    position: relative;
+    top: 6px;
+    left: 0;
+}
+.hamburger__open {
+    animation-duration: 550ms;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    transform-origin: 36%;
+}
+.hamburger__open.hamburger__one {
+    /* Animation  */
+    animation-name: hamburger-one;
+    transform: rotate(0deg) translate(0);
+}
+.hamburger__open.hamburger__two {
+    /* Animation */
+    animation-name: hamburger-two;
+}
+.hamburger__open.hamburger__three {
+    /* Animation */
+    animation-name: hamburger-three;
+    transform: rotate(0deg) translate(0);
+}
+@keyframes hamburger-one {
+    0% {
+        transform: rotate(0deg) translate(0);
+        background-color: $cl-dark;
+    }
+    10% {
+        transform: rotate(0deg) translate(0, 8px);
+    }
+    15% {
+        transform: rotate(0deg) translate(0, 8px);
+    }
+    100% {
+        transform: rotate(45deg) translate(0, 8px);
+        background-color: $cl-warning;
+    }
+}
+@keyframes hamburger-two {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes hamburger-three {
+    0% {
+        transform: rotate(0deg) translate(0);
+        background-color: $cl-dark;
+    }
+    10% {
+        transform: rotate(0deg) translate(0, -9px);
+    }
+    15% {
+        transform: rotate(0deg) translate(0, -9px);
+    }
+    100% {
+        transform: rotate(-45deg) translate(0, -9px);
+        background-color: $cl-warning;
+    }
+}
+.hamburger__close {
+    animation-duration: 550ms;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    transform-origin: 36%;
+}
+.hamburger__close.hamburger__one {
+    /* Animation  */
+    animation-name: hamburger-one-close;
+    transform: rotate(0deg) translate(0);
+}
+.hamburger__close.hamburger__two {
+    /* Animation */
+    animation-name: hamburger-two-close;
+}
+.hamburger__close.hamburger__three {
+    /* Animation */
+    animation-name: hamburger-three-close;
+    transform: rotate(0deg) translate(0);
+}
+@keyframes hamburger-one-close {
+    0% {
+        transform: rotate(45deg) translate(0, 8px);
+        background-color: $cl-warning;
+    }
+    85% {
+        transform: rotate(0deg) translate(0, 8px);
+    }
+    90% {
+        transform: rotate(0deg) translate(0, 8px);
+    }
+    100% {
+        transform: rotate(0deg) translate(0);
+        background-color: $cl-dark;
+    }
+}
+@keyframes hamburger-two-close {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes hamburger-three-close {
+    0% {
+        transform: rotate(-45deg) translate(0, -9px);
+        background-color: $cl-warning;
+    }
+    85% {
+        transform: rotate(0deg) translate(0, -9px);
+    }
+    90% {
+        transform: rotate(0deg) translate(0, -9px);
+    }
+    100% {
+        transform: rotate(0deg) translate(0);
+        background-color: $cl-dark;
+    }
+}
+.open {
+    display: flex;
+}
+.h-close {
+	-webkit-animation: none !important;
+	animation: none !important;
 }
 
-.open {
-    display: block;
-}
