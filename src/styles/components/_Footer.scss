@@ -1,0 +1,34 @@
+@import "./../variables";
+
+.footer-untrip {
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    padding: 1.5rem;
+}
+.footer-untrip__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.footer-untrip__box--title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.footer-untrip__box--nav {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        a {
+            font-weight: 500;
+        }
+    }
+}
