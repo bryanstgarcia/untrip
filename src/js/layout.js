@@ -5,8 +5,8 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import { Home } from "./views/Home.jsx";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./components/Navbar.jsx";
-import { Footer } from "./components/Footer.jsx";
+import { Navbar } from "./components/common/Navbar.jsx";
+import { Footer } from "./components/common/Footer.jsx";
 import { Login } from "./views/Login.jsx";
 import { Signup } from "./views/Signup.jsx";
 import { NotFound } from "./views/NotFound.jsx";

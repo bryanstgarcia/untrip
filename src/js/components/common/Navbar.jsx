@@ -1,9 +1,10 @@
-import React, { useState, useContext, useCallback } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
+import { Context } from "../../store/appContext";
 
-import Luna from "../../img/luna.png"
-import Sol from "../../img/sun.png"
+
+import Luna from "../../../img/luna.png"
+import Sol from "../../../img/sun.png"
 
 export const Navbar = () => {
 	const { store, actions} = useContext(Context);

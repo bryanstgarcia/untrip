@@ -1,6 +1,6 @@
 import React, { Component, useContext } from "react";
-import { Context } from "../store/appContext";
-
+import { Context } from "../../store/appContext";
+ 
 export const Footer = () => {
 	const { store, actions} = useContext(Context)
 	return (
