@@ -3,12 +3,16 @@
 @import "./variables";
 
 
-// Views
+// Home view
 @import "./views/Home";
+@import "./components/home/LandingPage";
+@import "./components/home/AboutUntrip";
+
 
 // Components
 @import "./components/Navbar";
-@import "./components/home/Landing";
+@import "./components/Footer";
+
 
 
 
@@ -42,6 +46,12 @@ a {
     &.text {
         color: $cl-dark;
     }
+    &.background-gray-scale {
+        background-color: $cl-dark;
+    }
+    &.text-gray-scale {
+        color: $cl-light;
+    }
 }
 .dark {
     &.background {
@@ -53,6 +63,12 @@ a {
     &.text {
         color: $cl-light;    
     }
+    &.background-gray-scale {
+        background-color: $cl-light;
+    }
+    &.text-gray-scale {
+        color: $cl-dark;
+    }
 }
 @media (prefers-color-scheme: light) {
     .light {
@@ -63,6 +79,12 @@ a {
             background-color: $cl-light;
         }
         &.text {
+            color: $cl-dark;
+        }
+        &.background-gray-scale {
+            background-color: $cl-light;
+        }
+        &.text-gray-scale {
             color: $cl-dark;
         }
     }
@@ -77,6 +99,12 @@ a {
         }
         &.text {
             color: $cl-light;    
+        }
+        &.background-gray-scale {
+            background-color: $cl-light;
+        }
+        &.text-gray-scale {
+            color: $cl-dark;
         }
     }
 }
