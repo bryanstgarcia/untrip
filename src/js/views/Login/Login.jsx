@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Alert, InputError, InputField, Loading, SubmitButton } from "../../components/common";
 import { UserLogged } from "../../context/UserLogged.jsx";
 import { Context } from "../../store/appContext";
+import { loginService } from "../../utils";
 
 const Login = () => {
     const { store, actions} = useContext(Context)
@@ -29,33 +30,20 @@ const Login = () => {
         }
         return ready;
     }
-    async function handleUserSubmit (userEmail, userPassword) {
+    async function handleUserSubmit (email, password) {
         try {
-            const response = await fetch(`${store.API_URL}/user/token`, {
-                method: "POST",
-                body: JSON.stringify({
-                    email: userEmail,
-                    password: userPassword
-                }),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            if (!response.ok && response.status == 400) {
-                const body = await response.json()
+            const login = await loginService({email, password })
+            if (login.token == null && login.status == 400) {
                 setLoading(false)
-                setLoggedError(body.message)
+                setLoggedError(login.message)
                 return
             }
-            if(!response.ok) {
-                throw new Error("Something happened: " + response.status)
-            }
-            const body = await response.json()
+            
             setUser(prev => {
                 return {
                     ...prev,
-                    token: body.authorizathion.token,
-                    refresh: body.authorizathion.refresh
+                    token: login.token,
+                    refresh: login.refresh
                 }
             })
             setTimeout(() => {
