@@ -1,0 +1,30 @@
+@import "./../variables";
+
+.signup-box {
+    display: grid;
+    place-items: center;
+    min-height: 90vh;
+    width: 100%;
+}
+.signup-box__content {
+    min-height: 55vh;
+    width: 90%;
+    max-width: 33rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+    /* Para desktoip 2.5rem */
+    margin: 2.5rem 0;
+    border-radius: 0.3125rem;
+
+    &.dark {
+        background-color: black;
+    }
+    &.light {
+        background-color: white;
+    }
+}
+.signup___form {
+    margin-top: 2rem;
+}
