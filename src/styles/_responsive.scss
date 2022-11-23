@@ -1,0 +1,33 @@
+$min-device: 350px;
+$max-device: 1820px;
+$device-sm: 520px;
+$device-md: 720px;
+$device-lg: 920px;
+$device-xl: 1520px;
+
+@mixin device-sm {
+    @media only screen and (min-width: $device-sm) {
+        @content;
+    }
+};
+
+
+@mixin device-md {
+    @media only screen and (min-width: $device-md) {
+        @content;
+    }
+};
+
+
+@mixin device-lg {
+    @media only screen and (min-width: $device-lg) {
+        @content;
+    }
+};
+
+
+@mixin device-xl {
+    @media only screen and (min-width: $device-xl) {
+        @content;
+    }
+};

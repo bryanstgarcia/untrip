@@ -1,0 +1,51 @@
+/* Fonts available: "Raleway" */
+
+
+/* -----Regular----- */
+/* 
+    Fonts styles available:
+        - font-xs
+        - font-sm
+        - font-md
+        - font-lg
+        - font-custom
+*/
+@mixin font-xs($font-family, $weight) {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: 0.875rem;
+}
+@mixin font-sm($font-family, $weight) {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: calc(0.95rem + .3vw);
+}
+@mixin font-md($font-family, $weight) {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: calc(1.25rem + 0.5vw);
+}
+@mixin font-lg($font-family, $weight) {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: calc(1.45rem + 1vw);
+}
+@mixin font-xl($font-family, $weight) {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: calc(1.45rem + 1.5vw);
+}
+@mixin font-custom($font-family, $weight, $size) {
+    @if ( not str-index($size, 'calc(')) {
+        @warn "Size property should be calc with a relative value and vw value to be responsive"
+    };
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: normal;
+    font-size: $size;
+}
