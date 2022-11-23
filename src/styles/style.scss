@@ -2,16 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "./variables";
 
+// Signup view
+@import "./views/Signup";
 
-// Home view
-@import "./views/Home";
-@import "./components/home/LandingPage";
-@import "./components/home/AboutUntrip";
+// Components common
+@import "./components/common/Navbar";
+@import "./components/common/Footer";
+@import "./components/common/InputField";
+@import "./components/common/SubmitButton";
+@import "./components/common/Loading";
 
 
-// Components
-@import "./components/Navbar";
-@import "./components/Footer";
+
 
 
 
