@@ -2,18 +2,21 @@ import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { Context } from "./../../store/appContext"
 
-export const InputField = (props) => {
-    const { store, actions } = useContext(Context)
+const InputField = (props) => {
+    const { store } = useContext(Context)
     return (
         <div className={`input-field ${store.theme}`}>
-            <label className="input-field__label" htmlFor={props.inputId}>{props.labelText}</label>
+            <label className={`input-field__label ${store.theme} text`} htmlFor={props.inputId}>{props.labelText}</label>
             <input 
-                className={`input-field__input ${store.theme}`}
+                className={`input-field__input ${store.theme} text`}
                 id={props.inputId} 
                 type={props.inputType}
                 value={props.stateValue}
                 onChange={(event)=> {
-                    props.setStateValue(event.target.value)
+                    props.setStateValue({
+                        value: event.target.value,
+                        error: false
+                    })
                     return
                 }}
             />
@@ -27,8 +30,9 @@ InputField.propTypes = {
     labelText: PropTypes.string.isRequired,
     stateValue: PropTypes.string.isRequired,
     setStateValue: PropTypes.func.isRequired
-
 }
 InputField.defaultProps = {
     inputType: "text",
 }
+
+export default InputField;

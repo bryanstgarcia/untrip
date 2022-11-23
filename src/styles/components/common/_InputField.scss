@@ -1,0 +1,50 @@
+@import "./../../variables";
+
+.input-field {
+    position: relative;
+    width: 100%;
+    min-height: 3.125rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;    
+}
+.input-field__label {
+    position: absolute;
+    top: -13px;
+    left: 15px;
+    padding: 0.1rem 0.45rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    &.dark {
+        background-color: black;
+    }
+    &.light {
+        background-color: white;
+    }
+}
+.input-field__input {
+    padding: 0.8rem 1rem;
+    width: 100%;
+    height: 95%;
+    font-size: 1.2rem;
+    border-radius: 0.3125rem;
+    &.dark {
+        background-color: black;
+        border: 1px solid $cl-light;
+        box-shadow: 0px 4px 7px rgba(250, 250, 250, 0.10);
+    }
+    &.light {
+        background-color: white;
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+        border: 1px solid $cl-dark;
+    }
+    &:focus.dark {
+        outline: 1px solid $cl-dt-primary;
+        border: 1px solid $cl-dt-primary;
+    }
+    &:focus.light {
+        outline: 1px solid $cl-lt-primary;
+        border: 1px solid $cl-lt-primary;
+    }
+}
