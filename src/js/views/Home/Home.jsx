@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { AboutUntrip } from "../components/home/AboutUntrip.jsx";
-import { LandingPage } from "../components/home/LandingPage.jsx";
-import { Context } from "../store/appContext";
+import { Context } from "../../store/appContext";
+import { AboutUntrip, LandingPage } from "./components";
+import './Home.scss'
 
-export const Home = () => {
+const Home = () => {
 	const { store, actions} = useContext(Context)
 
 	return (
@@ -13,3 +13,5 @@ export const Home = () => {
 		</div>
 	);
 }
+
+export default Home;
