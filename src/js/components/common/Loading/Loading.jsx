@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { Context } from "../../store/appContext";
-
+import { Context } from "../../../store/appContext";
+import './Loading.scss';
 const Loading = () => {
-    const { store, actions } = useContext(Context);
+    const { store } = useContext(Context);
     return (
         <div className={`${store.theme} loading`}>
             <div className={`${store.theme} background spinner-grow`} role="status">

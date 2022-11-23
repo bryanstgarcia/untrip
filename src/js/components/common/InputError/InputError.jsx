@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import { Context } from "../../store/appContext"
+import { Context } from "../../../store/appContext"
+import './InputError.scss';
 const InputError = (props) => {
     const { store } = useContext(Context)
     return(

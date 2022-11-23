@@ -1,10 +1,9 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../../store/appContext";
-
-
-import Luna from "../../../img/white-moon.png"
-import Sol from "../../../img/white-sun.png"
+import { Context } from "../../../store/appContext";
+import './Navbar.scss';
+const moonImg = 'https://res.cloudinary.com/bryancloudinary/image/upload/v1669169910/Untrip/white-moon_hgfppq.png';
+const sunImg = 'https://res.cloudinary.com/bryancloudinary/image/upload/v1669169926/Untrip/white-sun_xjvvjg.png';
 
 const Navbar = () => {
 	const { store, actions} = useContext(Context);
@@ -87,8 +86,8 @@ const Navbar = () => {
 							className="nav__list--theme"
 						>
 							{ (store.theme == "light")
-								? <img className="" src={Luna} />
-								: <img className="" src={Sol}/>
+								? <img className="" src={moonImg} />
+								: <img className="" src={sunImg}/>
 							}
 						</button>
 					</li>

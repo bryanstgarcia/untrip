@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { Context } from "../../store/appContext";
+import { Context } from "../../../store/appContext";
+import './Alert.scss';
 
 const Alert = (props) => {
     const { store } = useContext(Context)
@@ -18,7 +19,6 @@ const Alert = (props) => {
                         {props.secundaryBody ? props.secundaryBody : ""}
                     </p>
                 </div>
-
             </div>
         </aside>
     )

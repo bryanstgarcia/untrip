@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
+import { UserLogged } from "../../context/UserLogged";
 import { Context } from "../../store/appContext";
+import Favorites from "./components/Favorites";
 
 const HomeAuth = () => {
-	const { store, actions} = useContext(Context)
+	const { store } = useContext(Context);
+	const { user } = useContext(UserLogged);
 
 	return (
-		<div className={`untrip ${store.theme} background-contrast`}>
-			<h1>Hola protected</h1>
-		</div>
+		<main className={`untrip ${store.theme} background-contrast`}>
+			<Favorites />
+		</main>
 	);
 }
 

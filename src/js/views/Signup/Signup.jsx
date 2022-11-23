@@ -3,6 +3,9 @@ import { useLocation, useNavigate } from "react-router-dom"
 import { Context } from "../../store/appContext.js"
 import { InputError, InputField, Loading, SubmitButton } from "../../components/common";
 
+// Styles
+import './Signup.scss';
+
 
 export const Signup = props => {
     const { store, actions} = useContext(Context)

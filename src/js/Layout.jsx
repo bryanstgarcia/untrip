@@ -7,9 +7,8 @@ import injectContext from "./store/appContext";
 import { NotFound } from "./views/NotFound.jsx";
 import ProtectedRoutes from "./utils/ProtectedRoutes.jsx";
 import UserLoggedProvider from "./context/UserLogged.jsx";
-import Navbar from "./components/common/Navbar.jsx";
-import Footer from "./components/common/Footer.jsx";
 import { HomeAuthView, HomeView, LoginView, SignupView } from "./views/index.js";
+import { Footer, Navbar } from "./components/common/index.js";
 
 //create your first component
 const Layout = () => {

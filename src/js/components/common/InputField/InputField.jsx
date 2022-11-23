@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import { Context } from "./../../store/appContext"
-
+import { Context } from "../../../store/appContext";
+import './InputField.scss';
 const InputField = (props) => {
     const { store } = useContext(Context)
     return (

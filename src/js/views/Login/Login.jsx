@@ -106,7 +106,7 @@ const Login = () => {
                         />
                         <InputError error={password.error} />
                         <SubmitButton 
-                            text={"Sign Up"}
+                            text={"Login"}
                             witdh={"100"}
                         />
                     </form>

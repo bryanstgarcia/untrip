@@ -1,9 +1,10 @@
 import React, { Component, useContext } from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../../store/appContext";
+import { Context } from "../../../store/appContext";
+import './Footer.scss';
 
 const Footer = () => {
-	const { store, actions} = useContext(Context)
+	const { store } = useContext(Context)
 	return (
 		<footer className={`footer-untrip ${store.theme} background-gray-scale`}>
 			<div className="footer-untrip__box">
