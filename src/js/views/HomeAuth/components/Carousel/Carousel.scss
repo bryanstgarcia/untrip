@@ -1,0 +1,24 @@
+@import './../../../../../styles/variables';
+@import './../../../../../styles/responsive';
+@import './../../../../../styles/fontsMixins';
+
+.carousel-box {
+    width: 100%;
+    padding: 1rem 1.5rem;
+}
+.carousel__title {
+    @include font-custom('Raleway', 700, '1rem');
+}
+.carousel {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    min-height: 250px;
+    height: auto;
+    min-width: 100%;
+    width: auto;
+    padding: 1 1.5rem;
+    overflow-x: scroll;
+}
