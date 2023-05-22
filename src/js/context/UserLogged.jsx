@@ -6,7 +6,7 @@ export const UserLogged = React.createContext()
 const UserLoggedProvider = ({ children }) => {
     const [ user, setUser ] = useState({
         info: null,
-        token: null,
+        token: true,
         refresh: null,
         
     })
